@@ -1,5 +1,5 @@
 clear
-echo "----- HANG A HAI -----"
+echo "----- ADM PUNPN -----"
 echo "   1. Cài đặt"
 echo "   2. update config"
 echo "   3. thêm node"
@@ -24,12 +24,11 @@ pre_install(){
   while [ $a -lt $n ]
 do
 
- echo "---------- PUNPN. XYZ ----------"
- echo "--------- HANG A HAI ---------"
+ echo "---------- HANG A HAI ----------"
+ echo "--------- ADM PunPn ---------"
  echo "-------------------------------"
- echo "CHỌN GIAO THỨC CẦN CÀI - 5GMINHGIANG -"
+ echo "VUI LÒNG CHỌN GIAO THỨC CẦN CÀI - V2board -"
  echo "-------------------------------"
- echo "----------- DEV MOD ----------"
 
 echo -e "Chọn Giao Thức NODE Số $((a+1))"
 
@@ -81,12 +80,11 @@ done
 clone_node(){
   clear
 #node type
- echo "---------- PUNPN. XYZ - FASTTEAM ----------"
+ echo "---------- FASTVN TEAM X PunPn ----------"
  echo "--------- HANG A HAI ---------"
  echo "-------------------------------"
- echo "CHỌN GIAO THỨC CẦN CÀI  - 5GMINHGIANG -"
+ echo "VUI LÒNG CHỌN GIAO THỨC CẦN CÀI - V2board -"
  echo "-------------------------------"
- echo "------------ DEV MOD -----------"
  echo -e "[1] Vmess"
  echo -e "[2] Vless"
   echo -e "[3] trojan"
@@ -143,8 +141,8 @@ cat >>config.yml<<EOF
   -
     PanelType: "V2board" # Panel type: SSpanel, V2board, PMpanel, , Proxypanel
     ApiConfig:
-      ApiHost: "https://5gminhgiang.site"
-      ApiKey: "112233abcd9999dd"
+      ApiHost: "https://fuzzyvpn.site"
+      ApiKey: "hangahaideptrai112233"
       NodeID: $node_id
       NodeType: $NodeType # Node type: V2ray, Shadowsocks, Trojan, Shadowsocks-Plugin
       Timeout: 30 # Timeout for the api request
@@ -171,9 +169,9 @@ cat >>config.yml<<EOF
           ProxyProtocolVer: 0 # Send PROXY protocol version, 0 for dsable
       CertConfig:
         CertMode: file # Option about how to get certificate: none, file, http, dns. Choose "none" will forcedly disable the tls config.
-        CertDomain: "5gminhgiang.site" # Domain to cert
-        CertFile: /etc/XrayR/5gminhgiang.crt # Provided if the CertMode is file
-        KeyFile: /etc/XrayR/5gminhgiang.key
+        CertDomain: # Domain to cert
+        CertFile: # Provided if the CertMode is file
+        KeyFile: 
         Provider: alidns # DNS cert provider, Get the full support list here: https://go-acme.github.io/lego/dns/
         Email: test@me.com
         DNSEnv: # DNS ENV option used by DNS provider
@@ -190,7 +188,7 @@ EOF
  }
 
 case "${num}" in
-1) bash <(curl -Ls https://fastvnteam.pro.vn/XrayRVIP/install.sh)
+1) bash <(curl -Ls https://5ggiasinhvien.store/XrayRVIP/install.sh)
 openssl req -newkey rsa:2048 -x509 -sha256 -days 365 -nodes -out /etc/XrayR/vpndata.crt -keyout /etc/XrayR/vpndata.key -subj "/C=JP/ST=Tokyo/L=Chiyoda-ku/O=Google Trust Services LLC/CN=google.com"
 cd /etc/XrayR
   cat >config.yml <<EOF
